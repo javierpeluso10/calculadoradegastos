@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.styleApp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divPadre{
+    width: 500px;
+}
+
+.gastosParciales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonStyle{
+    height: 30px;
+}
+
+.labelFiltros{
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.contenedorFiltro{
+    display: none;
+}
+
+.contenedorFiltroON{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: max-content;
+}
+
+.categorias{
+    font-weight: 800px;
+    color: black;
+    margin: 10px;
+    font-weight: 1000;
+}
+
+.filtoCategoria{
+    margin-right: 5px;
+    accent-color: black;
+}
+
+.inputs{
+    margin: 10px;
+}
+
+.inputsTexto{
+    display: none;
+}
+
+.inputContent{
+    height: 15px;
+    border-radius: 2px solid black;
+    background-color: rgb(87, 85, 85);
+    color: white;
+    height: 20px;
+    margin: 5px;
+}
+
+
+.divButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputButton{
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 15px 5px;
+    padding: 3px;
+}
+
+.table-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableOf{
+    display: none;
+}
+
+.gastosTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.gastosTable th, .gastosTable td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.gastosTable th {
+    background-color: rgb(87, 85, 85);
+}
+
+.gastosTable button {
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.gastosTable button:hover {
+    background-color: black
+}
+
+
+select,
+option {
+    background-color: rgb(87, 85, 85);;
+    color: white;
+}
+
+
+.resutaldosStyle{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gastosFinalStyle{
+    margin: 5px 0;
+}
+
+
+@media only screen and (max-width: 585px){
+    .inputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inputContent{
+        margin: 10px 0;
+    }
+    .medioDePago{
+        margin-top: 5px;
+    }
+
+    .labelFiltros{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

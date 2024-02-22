@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Control de Gasto v1.0.1</title>
+</head>
+<body>
+    <!-- WEB APP -->
+    <!-- INGRESA SUELDO -->
+    <div class="styleApp">
+        <div class="inputs">
+            <input type="number"  placeholder="Ingresar Sueldo" id="sueldo" class="inputContent">
+            <button type="button" id= "buttonIngresarSueldo" class="inputButton">Aceptar</button>
+            <button type="button" id= "buttonEliminarSueldo" class="inputButton">Eliminar Sueldo</button>
+            <button type="button" id= "buttonModificarSueldo" class="inputButton" disabled="true">Modificar Sueldo</button>
+        </div>
+    <!-- INGRESAR GASTOS -->
+        <div >
+            <input type="text" id="gasto" placeholder="Nombre del gasto" onkeypress="return Solo_Texto(event)" disabled=true class="inputsTexto"> 
+            <input type="number" id="valorGasto" placeholder="Monto del gasto" onkeypress="return Solo_Numeros(event)" disabled=true class="inputsTexto">
+    <!-- MEDIOS DE PAGO -->
+            <select name="mediosDePago" id="mediosPago" disabled=true class="inputsTexto">
+                <option value="default">Seleccione Metodo de Pago</option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                <option value="Tarjeta de Debito">Tarjeta Debito</option>
+                <option value="Billeta Virtual">Mercado Pago</option>
+                <option value="Tarjeta de Credito">Tarjeta de Credito</option>
+            </select>
+        </div>
+    </div>
+    <!-- BOTONES AGREGAR NUEVO GASTO Y CALCULAR RESTO -->
+    <div class="divButtons">
+        <button type="button" id="buttonAgregarGasto" disabled="true"  class="inputsTexto">Agregar Gasto</button>
+        <button type="button" id="buttonEliminarGastos"  class="inputsTexto">Eliminar gastos</button>
+    </div>
+        <!-- FILTROS DE PAGO -->
+        <div class="contenedorFiltro" id="contenedorFiltros">
+            <label for="filtros" class="labelFiltros">Filtrar medios de Pago</label>
+            <div class="categorias">
+                <input type="radio" name="todos" id="todos" class="filtoCategoria" checked>Todos
+            </div>
+            <div class="categorias">
+                <input type="radio" name="todos" class="filtoCategoria" id="efectivo">Efectivo
+            </div>
+            <div class="categorias"> 
+                <input type="radio" name="todos"  class="filtoCategoria" id="debito">Tarjeta Debito
+            </div>
+            <div class="categorias">
+                <input type="radio" name="todos" class="filtoCategoria" id="transferencia">Transferencia
+            </div>
+            <div class="categorias"> 
+                <input type="radio" name="todos"  class="filtoCategoria" id="mp">Billetera Virtual
+            </div>
+            <div class="categorias">
+                <input type="radio" name="todos" class="filtoCategoria" id="credito">Tarjeta Credito
+            </div>
+        </div>
+    <!-- TABLA DE GASTOS  -->
+    <div class="table-container" id="table">
+        <div id="muestraDatos" class="divPadre">
+                <!-- codigo inyectado por js  -->
+        </div>
+    </div>
+    <div id="muestraGastoTotal">
+        <!-- codigo inyectado por js -->
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
